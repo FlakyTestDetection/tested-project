@@ -6,8 +6,15 @@ package edu.gmu.swe.diffcov.test;
  */
 public class App 
 {
-    public static void main( String[] args )
+    public void foo()
     {
-        System.out.println( "Hello World!" );
+    	bar();
     }
+    
+    public void bar()
+    {
+    	
+    }
+    public static int i;
+    
 }
