@@ -6,6 +6,10 @@ package edu.gmu.swe.diffcov.test;
  */
 public class App 
 {
+	public void otherMethod()
+	{
+		
+	}
     public void foo()
     {
     	bar();
