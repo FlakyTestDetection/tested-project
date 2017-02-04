@@ -9,6 +9,6 @@ public class CopyOfAppTest {
 
 	@Test
 	public void testApp2() {
-		new App().bar();
+		new App().foo();
 	}
 }
