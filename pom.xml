@@ -14,47 +14,27 @@
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>edu.gmu.swe.surefire</groupId>
-			<artifactId>diff-coverage-maven-plugin</artifactId>
-			<version>1.0-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>edu.gmu.swe.surefire</groupId>
-			<artifactId>diff-coverage-listener</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-			<scope>test</scope>
-		</dependency>
 	</dependencies>
 	<build>
+		<extensions>
+			<extension>
+				<groupId>edu.gmu.swe.surefire</groupId>
+				<artifactId>diff-coverage-maven-extension</artifactId>
+				<version>1.0-SNAPSHOT</version>
+			</extension>
+		</extensions>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.19.1</version>
-				<configuration>
-					<forkMode>once</forkMode>
-					<argLine>-javaagent:${user.home}/.m2/repository/edu/gmu/swe/surefire/diff-coverage-agent/0.0.1-SNAPSHOT/diff-coverage-agent-0.0.1-SNAPSHOT.jar=gitDir=.git,commit=HEAD</argLine>
-					<properties>
-						<property>
-							<name>listener</name>
-							<value>edu.gmu.swe.diffcov.CoverageListener</value>
-						</property>
-					</properties>
-				</configuration>
+				<!--<configuration> <forkMode>once</forkMode> <argLine>-javaagent:${user.home}/.m2/repository/edu/gmu/swe/surefire/diff-coverage-agent/0.0.1-SNAPSHOT/diff-coverage-agent-0.0.1-SNAPSHOT.jar=gitDir=.git,commit=HEAD</argLine> 
+					<properties> <property> <name>listener</name> <value>edu.gmu.swe.diffcov.CoverageListener</value> 
+					</property> </properties> </configuration> -->
 			</plugin>
-			<plugin>
-				<groupId>edu.gmu.swe.surefire</groupId>
-				<artifactId>diff-coverage-maven-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>collect-cov</id>
-						<goals>
-							<goal>collect</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+			<!--<plugin> <groupId>edu.gmu.swe.surefire</groupId> <artifactId>diff-coverage-maven-plugin</artifactId> 
+				<executions> <execution> <id>collect-cov</id> <goals> <goal>collect</goal> 
+				</goals> </execution> </executions> </plugin> -->
 		</plugins>
 	</build>
 </project>
