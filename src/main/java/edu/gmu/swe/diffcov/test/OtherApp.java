@@ -8,6 +8,14 @@ public class OtherApp {
 			public void run() {
 				// TODO Auto-generated method stub
 				int n = 10;
+				Runnable r = new Runnable() {
+					
+					@Override
+					public void run() {
+						// TODO Auto-generated method stub
+						
+					}
+				};
 			}
 		});
 	}
