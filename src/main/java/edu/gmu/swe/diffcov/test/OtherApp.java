@@ -13,7 +13,7 @@ public class OtherApp {
 					@Override
 					public void run() {
 						// TODO Auto-generated method stub
-						
+						int n = 10;
 					}
 				};
 			}
