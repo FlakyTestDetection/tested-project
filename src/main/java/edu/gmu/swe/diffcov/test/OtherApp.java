@@ -22,7 +22,7 @@ public class OtherApp {
 	static class InnerClass{
 		void foo()
 		{
-			
+			int n = 10;
 		}
 	}
 }
