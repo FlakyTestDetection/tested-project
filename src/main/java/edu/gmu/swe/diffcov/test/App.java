@@ -4,7 +4,7 @@ package edu.gmu.swe.diffcov.test;
  * Hello world!
  *
  */
-public class App 
+public class App extends AppSuper
 {
 	public void otherMethod()
 	{
