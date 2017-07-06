@@ -6,7 +6,7 @@ package edu.gmu.swe.diffcov.test;
  */
 public class App extends AppSuper
 {
-	 public AppSuper fozo(int m, AppSuper a)
+	 public AppSuper fozob(int m, AppSuper a)
 	    {
 	    		System.out.println("i==0");
 	    		return null;
