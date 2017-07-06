@@ -6,7 +6,7 @@ package edu.gmu.swe.diffcov.test;
  */
 public class App extends AppSuper
 {
-	 public AppSuper fozob(int m, AppSuper a)
+	 public AppSuper fozo(int m, AppSuper a)
 	    {
 	    		System.out.println("i==0");
 	    		return null;
@@ -16,12 +16,12 @@ public class App extends AppSuper
 	{
 		System.out.println("This change will be missed");
 	}
-    public void foo()
-    {
-    	bar();
-    	if(i == 0)
-    		System.out.println("i==0");
-    }
+//    public void foo()
+//    {
+//    	bar();
+//    	if(i == 0)
+//    		System.out.println("i==0");
+//    }
     public void magic()
     {
     	

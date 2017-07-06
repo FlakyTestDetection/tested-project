@@ -5,6 +5,11 @@ public class AppSuper extends AppSuperSuper {
 	    {
 	    		System.out.println("i==0");
 	    }
+	 
+	 public AppSuper[][][] arr()
+	 {
+		 return null;
+	 }
 	 @Override
 	public void foo() {
 		// TODO Auto-generated method stub
