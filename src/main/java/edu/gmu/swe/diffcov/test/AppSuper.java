@@ -15,4 +15,7 @@ public class AppSuper extends AppSuperSuper {
 		// TODO Auto-generated method stub
 		
 	}
+	 class inner{
+		 
+	 }
 }
