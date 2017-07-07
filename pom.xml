@@ -16,13 +16,6 @@
 		</dependency>
 	</dependencies>
 	<build>
-		<extensions>
-			<extension>
-				<groupId>edu.gmu.swe.surefire</groupId>
-				<artifactId>diff-coverage-maven-extension</artifactId>
-				<version>1.0-SNAPSHOT</version>
-			</extension>
-		</extensions>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
