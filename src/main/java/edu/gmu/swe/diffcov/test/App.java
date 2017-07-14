@@ -6,6 +6,12 @@ package edu.gmu.swe.diffcov.test;
  */
 public class App extends AppSuper
 {
+	static class inner{
+		void foo(){
+			
+		}
+	}
+	int f;
 	 public AppSuper fozo(int m, AppSuper a)
 	    {
 	    		System.out.println("i==0");

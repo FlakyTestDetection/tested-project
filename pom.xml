@@ -1,33 +1,54 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>edu.gmu.swe.diffcov.test</groupId>
-	<artifactId>diffcoverage-tested-project</artifactId>
-	<packaging>jar</packaging>
-	<version>1.0-SNAPSHOT</version>
-	<name>testedproject</name>
-	<url>http://maven.apache.org</url>
-	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.19.1</version>
-				<!--<configuration> <forkMode>once</forkMode> <argLine>-javaagent:${user.home}/.m2/repository/edu/gmu/swe/surefire/diff-coverage-agent/0.0.1-SNAPSHOT/diff-coverage-agent-0.0.1-SNAPSHOT.jar=gitDir=.git,commit=HEAD</argLine> 
-					<properties> <property> <name>listener</name> <value>edu.gmu.swe.diffcov.CoverageListener</value> 
-					</property> </properties> </configuration> -->
-			</plugin>
-			<!--<plugin> <groupId>edu.gmu.swe.surefire</groupId> <artifactId>diff-coverage-maven-plugin</artifactId> 
-				<executions> <execution> <id>collect-cov</id> <goals> <goal>collect</goal> 
-				</goals> </execution> </executions> </plugin> -->
-		</plugins>
-	</build>
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>edu.gmu.swe.diffcov.test</groupId>
+    <artifactId>diffcoverage-tested-project</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <name>testedproject</name>
+    <url>http://maven.apache.org</url>
+    <dependencies>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.10</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.19.1</version>
+   <!--             <dependencies>
+                    <dependency>
+                        <artifactId>surefire-n-exec-testng</artifactId>
+                        <groupId>edu.gmu.swe.surefire</groupId>
+                        <version>2.19.1</version>
+                    </dependency>
+                </dependencies>
+				-->
+                <configuration>
+                    <threadCount>1</threadCount>
+					<forkCount>1</forkCount>
+                </configuration>
+				<!--	<reuseForks>false</reuseForks>
+                    <properties>
+                        <property>
+                            <name>rerunAllTests</name>
+                            <value>5</value>
+                        </property>
+                    </properties>
+                </configuration>
+-->
+                <!--<configuration> <forkMode>once</forkMode> <argLine>-javaagent:${user.home}/.m2/repository/edu/gmu/swe/surefire/diff-coverage-agent/0.0.1-SNAPSHOT/diff-coverage-agent-0.0.1-SNAPSHOT.jar=gitDir=.git,commit=HEAD</argLine> 
+                    <properties> <property> <name>listener</name> <value>edu.gmu.swe.diffcov.CoverageListener</value> 
+                    </property> </properties> </configuration> -->
+            </plugin>
+            <!--<plugin> <groupId>edu.gmu.swe.surefire</groupId> <artifactId>diff-coverage-maven-plugin</artifactId> 
+                <executions> <execution> <id>collect-cov</id> <goals> <goal>collect</goal> 
+                </goals> </execution> </executions> </plugin> -->
+        </plugins>
+    </build>
 </project>
